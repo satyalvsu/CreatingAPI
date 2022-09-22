@@ -1,1 +1,24 @@
 
+
+
+{% block head %}
+
+<title>Stats</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center;color:#143d59;">Statistical Analysis Report</h1>
+
+    <div class="form center ">
+        <form action="/analysis" method="POST" enctype="multipart/form-data">
+            <label style="color:#143d59;" ><b>Upload Your Clean DataSet: &nbsp </b>    </label>
+            <input type="file" id="analys" name="myfile"> <br><br>
+            <input type="submit" value="Analyze!">
+            <p style="color : #143d59"><b>Note: Please use only .csv file</b></p>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
